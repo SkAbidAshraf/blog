@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="article-content py-3 prose my-5 mb-8 text-gray-800 text-lg text-justify">
+                <div class="article-content py-3 prose my-5 mb-8 text-gray-800 text-base text-justify">
                     {!! str_replace('<img ', '<img style="margin-block: 1rem;" ', $post->content) !!}
                     <style>
                         figure {

@@ -89,8 +89,9 @@ class PostResource extends Resource
                 TextColumn::make('slug')->sortable()->searchable()->limit(10)
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('author.name')->sortable()->searchable()->wrap(),
-                TextColumn::make('published_at')->date('y-m-d')->sortable()->searchable(),
-                TextColumn::make('created_at')->date('y-m-d')->sortable(),
+                TextColumn::make('published_at')->date('d-m-y')->sortable()->searchable(),
+                TextColumn::make('created_at')->date('d-m-y')->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 CheckboxColumn::make('featured')->sortable()->visible(auth()->user()->isAdmin()),
             ])
             ->filters([

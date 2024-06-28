@@ -2,11 +2,11 @@
 <div {{$attributes}}>
     <a wire:navigate href="{{ route('posts.show', $post->slug)}}">
         <div>
-            <img class="h-100 rounded-lg" src="{{ $post->getThumbnailImage() }}">
+            <img class="w-full h-52 object-cover rounded-lg opacity-100 hover:opacity-80 hover:scale-105 transition-all duration-300 " src="{{ $post->getThumbnailImage() }}">
         </div>
     </a>
     <div class="mt-3">
-       <a wire:navigate href="{{ route('posts.show', $post->slug)}}" class="xl:text-xl text-lg sm:text-base font-bold text-gray-900">{{ $post->title }} </a>
+       <a wire:navigate href="{{ route('posts.show', $post->slug)}}" class="xl:text-xl text-base sm:text-sm font-bold text-gray-900 hover:text-blue-600">{{ $post->title }} </a>
     </div>
 
     <div class="mt-3">
