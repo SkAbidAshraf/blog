@@ -2,9 +2,9 @@
 <div class=" border-b border-gray-200">
     <article class="[&:not(:last-child)]:border-b border-white pb-10">
         <div class="article-body grid grid-cols-12 gap-3 mt-5 items-start">
-            <div class=" h-full w-full md:col-span-4 sm:col-span-6 col-span-12">
+            <div class=" h-full w-full md:col-span-4 sm:col-span-6 col-span-12 ">
                 <a wire:navigate href="{{ route('posts.show', $post->slug) }}">
-                    <img class="max-h-80 h-full w-full object-cover mx-auto rounded-lg"
+                    <img class="max-h-80 h-full w-full object-cover mx-auto rounded-lg hover:opacity-80 hover:scale-105 transition-all duration-300"
                         src="{{ $post->getThumbnailImage() }}" alt="thumbnail">
                 </a>
             </div>
@@ -22,7 +22,7 @@
                     @endauth
 
                 </div>
-                <h2 class="text-xl font-bold text-gray-900">
+                <h2 class="text-xl font-bold hover:text-blue-600 text-gray-900">
                     <a wire:navigate href="{{ route('posts.show', $post->slug) }}">
                         {{ $post->title }}
                     </a>
